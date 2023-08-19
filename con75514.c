@@ -17,20 +17,20 @@
 
 // Functions prototypes
 
-void aiStoreCorrect(int *, int *, int *, int *, int *, int *, int *, int *, int);
+void aiStoreCorrect(int *, int *, int *, int *, const int *, const int *, const int *, const int *, int);
 void codeRandomizer(int *, int *, int *, int *, int);
 void displayIntro();
 void displayRules();
 void displayEnding();
 void finalScore(int, int);
-void getNumbers(int *, int *, int *, int *, int);
+void getNumbers(const int *, const int *, const int *, const int *, int);
 void nextRound();
 void playAgain();
 int aiCodeGuesser(int, int);
 void playMastermind(int, int, int *, int *);
 int humanCodeGuesser(int, int);
 int nGamesValidator();
-int numberChecker(int *, int *, int *, int *, int *);
+int numberChecker(const int *, const int *, const int *, const int *, const int *);
 
 /**********************************************************
 Description : This function loops the game and the choices.
@@ -303,7 +303,7 @@ This function contains all the functions that are needed for the game.
 @return : This fuction does not return any value.
 **************************************************************************************************************************/
 
-void aiStoreCorrect(int *pG1, int *pG2, int *pG3, int *pG4, int *pDigit1, int *nDigit2, int *pDigit3, int *pDigit4, int nDigitCount)
+void aiStoreCorrect(int *pG1, int *pG2, int *pG3, int *pG4, const int *pDigit1, const int *nDigit2, const int *pDigit3, const int *pDigit4, int nDigitCount)
 {
     int nRandom;                                                    // This will store the random number that will be generated.
 
@@ -522,7 +522,7 @@ if the numbers entered by the player are valid or invalid.
 @return : This function does not return any value.
 *****************************************************************/
 
-void getNumbers(int *pG1, int *pG2, int *pG3, int *pG4, int nDigitCount)
+void getNumbers(const int *pG1, const int *pG2, const int *pG3, const int *pG4, int nDigitCount)
 {
     do
     {
@@ -557,7 +557,7 @@ This also prints the hint.
 @return : This function does not return anyvalue.
 *****************************************************************************************/
 
-int numberChecker(int *pNumber, int *pAnswer, int *pNotAnswer1, int *pNotAnswer2, int *pNotAnswer3)
+int numberChecker(const int *pNumber, const int *pAnswer, const int *pNotAnswer1, const int *pNotAnswer2, const int *pNotAnswer3)
 {
     int nCounter = 0;                                   // Counter for the storing the value.
 
